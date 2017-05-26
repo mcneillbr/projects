@@ -38,28 +38,26 @@ function getHtml(strUrl )
         }
     });
 }
-//////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 /// mascara data ##/##/####
 /// mascara cep #####-###
 /// mascara tel #####-###
 /// mascara cpf ###.###.###-##
-function formatarTextBox(e, mascara, frmImput){
-    var evtobj = window.event ? event : e;
-    var unicode = evtobj.charCode? evtobj.charCode : evtobj.keyCode;
-    var maxlength = 9;
+function formatarTextBox(e, mascara, frmImput, maxlength) {
+    var evtobj = e || (window.event ? event : e);
+    var unicode = evtobj.keyCode || evtobj.charCode ;
+    var maxlength = maxlength || 9;
     var i = frmImput.value.length;
-    var saida = mascara.substring(0,1);
+    var saida = mascara.substring(0, 1);
     var texto = mascara.substring(i);
-    if(unicode == 9 && frmImput.value.length < maxlength) return false;
-    if(!(unicode == 8 || unicode == 9 || unicode == 37 || unicode == 39 || unicode == 46))
-    {             
-        if ((unicode < 48||unicode > 57) || frmImput.value.length > maxlength)
-        {
+    if (unicode == 9 && frmImput.value.length < maxlength) return false;
+    var isnumber = (unicode < 48 || unicode > 57) && (unicode < 96 || unicode > 105);
+    if (!(unicode == 8 || unicode == 9 || unicode == 37 || unicode == 39 || unicode == 46)) {
+        if (isnumber || frmImput.value.length > maxlength) {
             return false;
-        }    
-        if(texto.substring(0,1) != saida)
-        {
-            frmImput.value += texto.substring(0,1);
+        }
+        if (texto.substring(0, 1) != saida) {
+            frmImput.value += texto.substring(0, 1);
         }
     }
     return true;
