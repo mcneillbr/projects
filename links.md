@@ -1,3 +1,14 @@
+RestAPI
+
+pt-br
+https://docs.microsoft.com/pt-br/azure/architecture/best-practices/api-design   ***
+
+https://www.openapis.org/
+
+https://www.ibm.com/support/knowledgecenter/en/SS4GCC_6.1.1/com.ibm.urelease.doc/topics/rest_api_ref_conventions.html
+
+https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api#advanced-queries
+
 https://cloudonaut.io/create-a-serverless-restful-api-with-api-gateway-cloudformation-lambda-and-dynamodb/
 
 https://docs.wattics.com/2016/02/22/how-can-i-upload-data-via-the-wattics-rest-api/
