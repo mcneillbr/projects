@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>teste upload
+		<?php echo $title; ?>
+	</title>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css" />
+	<link rel="stylesheet" href="assets/uikit/css/uikit.css" />
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
+	<script src="assets/uikit/js/uikit.js"></script>
+
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="js-upload uk-placeholder uk-text-center">
+					<span uk-icon="icon: cloud-upload"></span>
+					<span class="uk-text-middle">Attach binaries by dropping them here or</span>
+					<div uk-form-custom>
+						<input type="file" multiple>
+						<span class="uk-link">selecting one</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="containerProgressBar" class="row">
+		
+		</div>
+	</div>
+	<script>
+		//var bar = document.getElementById('js-progressbar');
+        var createProgressBar = (function(index, file){
+            var html = `
+            <div id="jsProgressbar_${index}" class="col-md-12">
+			    <progress id="file_id_${index}" data-file-id="${index}" class="uk-progress" value="0" max="100" hidden></progress>
+			    <span>${file.name}</span>&nbsp;
+                tamanho &nbsp;
+                <span data-type="size">x</span>
+                perce &nbsp;
+			    <span data-type="perc">x</span>
+            &nbsp;
+		</div>`;
+            $('#containerProgressBar').append(html);
+        });
+
+        var fileCount;
+        var files;
+        var bar;
+
+		UIkit.upload('.js-upload', {
+
+			url: '',
+			multiple: true,
+
+			beforeSend: function(environment) {
+				console.log('beforeSend', arguments);
+
+				// The environment object can still be modified here. 
+				// var {data, method, headers, xhr, responseType} = environment;
+               
+               var fnProgress = (function(id){
+                   return function(evt) { 
+                       console.log('teste', evt, ' id file ', id);
+                       
+                       var bar = $('#jsProgressbar_' + (id) + ' progress').get(0);
+				        bar.max = evt.total;
+				        bar.value = evt.loaded;
+                        $('#jsProgressbar_' + id +  ' span[data-type="size"]').html(calcFileSize(evt.total));                
+				        $('#jsProgressbar_' + id +  ' span[data-type="perc"]').html(Math.round(evt.loaded * 100 / evt.total));
+
+                       };
+               });
+               
+               var fnLoadStart = (function(id){
+                   return (function (evt) {
+                        bar = $('#jsProgressbar_' + id + ' progress').get(0);
+                        console.debug('bar-id', id, bar);
+                        bar.removeAttribute('hidden');
+                        bar.max = evt.total;
+                        bar.value = evt.loaded;
+                   
+				         $('#jsProgressbar_' + id +  ' span[data-type="size"]').html(calcFileSize(evt.total));                
+				        $('#jsProgressbar_' + id +  ' span[data-type="perc"]').html(Math.round(evt.loaded * 100 / evt.total));
+                   });
+               });
+
+               environment.xhr.upload.addEventListener("load", fnLoadStart(fileCount), false);
+               environment.xhr.upload.addEventListener("progress", fnProgress(fileCount), false);
+               fileCount++;
+			},
+			beforeAll: function(component, filelist) {
+				files = filelist;
+                fileCount = 0;
+                bar = null;
+                $('#containerProgressBar').empty();
+                console.log('beforeAll', arguments);
+                $.each(filelist, function( index, file ) {
+                    createProgressBar(index, file);
+                    console.log('file.name', file.name, 'file.size', file.size, 'file.size', file.type);
+                });    
+
+			},
+			load: function() {
+				console.log('load', arguments);
+                
+
+			},
+			error: function() {
+				console.log('error', arguments);
+			},
+			complete: function() {
+				console.log('complete', arguments);
+			},
+
+			loadStart: function(e) {
+				//
+                console.log('loadStart', arguments);
+               
+			},
+
+			progress: function(e) {
+				console.log('progress', arguments);
+               
+			},
+
+			loadEnd: function(e) {
+				console.log('loadEnd', arguments, 'fileCount', fileCount);
+
+				//bar.max = e.total;
+				//bar.value = e.loaded;
+                  
+				//$('#jsProgressbarSize').html(calcFileSize(e.loaded));
+				//$('#jsProgressbarPerc').html('100%;');
+			},
+
+			completeAll: function() {
+				console.log('completeAll', arguments);
+
+				setTimeout(function() {
+					//bar.setAttribute('hidden', 'hidden');
+				}, 1000);
+
+				console.log('Upload Completed');
+                fileCount = 0;
+                files = null;
+			}
+
+		});
+
+		function calcFileSize(size) {
+			var fileSize = 0;
+            if (size > 1024 * 1024)
+            {
+                fileSize = (Math.round(size * 100 / (1024 * 1024)) / 100).toString() + ' MB';
+            }
+				
+			else{
+                
+                fileSize = (Math.round(size * 100 / 1024) / 100).toString() + ' KB';
+            }
+            return fileSize;
+				
+		}
+	</script>
+
+</body>
+
+</html>
