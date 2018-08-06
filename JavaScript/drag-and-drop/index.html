@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>drag and Drop - teste</title>
+    <!-- css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.2/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        <div class="row magazine-container">
+            <div class="col-md-12 grid-magazine-pages">
+                <div class="panel panel-default panel-magazine-page">
+                    <div class="panel-body panel-page-body">
+                        <figure class="figure-page-box">
+                            <img id="imag1" draggable="true" src="https://picsum.photos/400/500/?random" alt="" ondragstart="dragstart_handler(event)" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">
+                        </figure>
+                    </div>
+                    <div class="panel-heading panel-page-toolbar">
+                        <div class="panel-page-toolbar-title">Pág. 999</div>
+                        <div class="panel-group-page-toolbar-icons">
+                            <span class="panel-page-toolbar-icon"><i class="fas fa-info"></i></span>
+                            <span class="panel-page-toolbar-icon"><i class="fas fa-edit"></i></span>
+                            <span class="panel-page-toolbar-icon"><i class="fas fa-trash"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default panel-magazine-page">
+                    <div class="panel-body panel-page-body">
+                        <img id="imag2" draggable="true" src="https://picsum.photos/150/100/?random" alt="" ondragstart="dragstart_handler(event)" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">
+                    </div>
+                    <div class="panel-heading panel-page-toolbar">
+                        <div class="panel-page-toolbar-title">Pág. 999</div>
+                        <div class="panel-group-page-toolbar-icons">
+                            <span class="panel-page-toolbar-icon"><i class="fas fa-info"></i></span>
+                            <span class="panel-page-toolbar-icon"><i class="fas fa-edit"></i></span>
+                            <span class="panel-page-toolbar-icon"><i class="fas fa-trash"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+            function dragstart_handler(ev) {
+                // Adiciona o id do elemento alvo para o objeto de transferência de dados
+                ev.dataTransfer.setData("text/plain", ev.target.id);
+                ev.dropEffect = "move";
+            }
+            function dragover_handler(ev) {
+                ev.preventDefault();
+                // Define o dropEffect para ser do tipo move
+                ev.dataTransfer.dropEffect = "move"
+            }
+            function drop_handler(ev) {
+                ev.preventDefault();
+                // Pega o id do alvo e adiciona o elemento que foi movido para o DOM do alvo
+                var data = ev.dataTransfer.getData("text");
+                console.debug(ev, 'data', data, 'target', ev.target, 'source', document.getElementById(data));
+                swapImage(document.getElementById(data), ev.target);
+                //ev.target.appendChild(document.getElementById(data));
+            }
+
+            function swapImage(source, target){
+                var img = source.src;
+                source.src = target.src;
+                target.src = img;
+            }
+    </script>
+</body>
+
+</html>
