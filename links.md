@@ -1,3 +1,6 @@
+# High performance HTML
+https://samdutton.wordpress.com/2015/04/02/high-performance-html/
+
 #Design atterns PHP
 https://designpatternsphp.readthedocs.io/pt_BR/latest/README.html
 
