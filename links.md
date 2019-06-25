@@ -10,6 +10,8 @@ https://keen.io/docs/streams/image-beacon/
 API
 https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon
 
+Creditcard
+https://www.bincodes.com/random-creditcard-generator/
 
 RestAPI
 
