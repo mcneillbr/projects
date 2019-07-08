@@ -39,23 +39,23 @@ wget https://dl.pstmn.io/download/latest/linux64 -O postman-linux-x64.tar.gz
 
 sudo tar xvzf postman-linux-x64.tar.gz -C /opt
 
-sudo ln -s /opt/Postman/Postman /usr/bin/postman
+sudo ln -s /opt/Postman/Postman /usr/local/bin/postman
 
-cat << EOF > ~/.local/share/applications/postman2.desktop
+cat << EOF > /usr/share/applications/postman2.desktop
 [Desktop Entry]
 Name=Postman
-GenericName=API Client
+GenericName=Postman
 X-GNOME-FullName=Postman API Client
 Comment=Make and view REST API calls and responses
-Keywords=api;
-Exec=/opt/Postman/Postman
+Keywords=api,network,web,postman;
+Exec=/usr/local/bin/postman
 Terminal=false
+Icon=/opt/postman/app/resources/app/assets/icon.png
+Categories=Development;Utilities;X-Developer;Application;
 Type=Application
-Icon=/opt/Postman/app/resources/app/assets/icon.png
-Categories=Development;Utilities;
 EOF
 
-chmod +x ~/.local/share/applications/postman2.desktop
+chmod +x /usr/share/applications/postman2.desktop
 
 
 
