@@ -1,3 +1,6 @@
+#geeksforgeeks - algorithm challenges
+https://practice.geeksforgeeks.org/
+
 # Manifesto eXtreme Go Horse (XGH)
 https://sou.gohorseprocess.com.br/extreme-go-horse-xgh/
 
