@@ -1,3 +1,21 @@
+# Manifesto eXtreme Go Horse (XGH)
+https://sou.gohorseprocess.com.br/extreme-go-horse-xgh/
+
+# Google doodles
+https://www.google.com/doodles
+
+#mean - mongodb, angular, node express
+http://meanstack.io/
+
+# rest test test
+https://resttesttest.com/
+
+#api typing dna - biometrics auto for api keystroke
+https://www.typingdna.com/
+
+#code sandbox react and angular and node 
+https://codesandbox.io
+
 # High performance HTML
 https://samdutton.wordpress.com/2015/04/02/high-performance-html/
 
