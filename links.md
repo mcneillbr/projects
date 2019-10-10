@@ -74,7 +74,8 @@ http://schemas.liquid-technologies.com/OpenTravel/2008B/
 
 https://quandarypeak.com/2014/09/introduction-gmail-api/
 
-# *** http://docs.ckan.org/en/ckan-2.7.2/contributing/architecture.html
+# Contributing guide » CKAN code architecture (***)
+https://docs.ckan.org/en/ckan-2.7.3/contributing/architecture.html
 
 https://i0.wp.com/www.pedroliveira.pt/wp-content/uploads/2015/08/restful-api-diagram-nhm-20150502.png
 
