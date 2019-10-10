@@ -1,3 +1,12 @@
+# choose BEM and not another CSS modular solution?
+http://getbem.com/faq/#why-bem
+
+#Micro Frontends
+https://martinfowler.com/articles/micro-frontends.html
+
+# Zeplin helps developers, designers and the whole team
+https://zeplin.io/why-zeplin 
+
 #https://github.com/isabellegalvao/js-studies
 
 # https://lusion.co/
@@ -42,9 +51,9 @@ https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon
 Creditcard
 https://www.bincodes.com/random-creditcard-generator/
 
-RestAPI
+# RestAPI
 
-pt-br
+## pt-br
 https://docs.microsoft.com/pt-br/azure/architecture/best-practices/api-design   ***
 
 https://www.openapis.org/
@@ -65,7 +74,7 @@ http://schemas.liquid-technologies.com/OpenTravel/2008B/
 
 https://quandarypeak.com/2014/09/introduction-gmail-api/
 
-*** http://docs.ckan.org/en/ckan-2.7.2/contributing/architecture.html
+# *** http://docs.ckan.org/en/ckan-2.7.2/contributing/architecture.html
 
 https://i0.wp.com/www.pedroliveira.pt/wp-content/uploads/2015/08/restful-api-diagram-nhm-20150502.png
 
