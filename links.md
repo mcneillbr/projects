@@ -1,5 +1,12 @@
+# MVC, MVP and MVVM Design Pattern
+https://medium.com/@ankit.sinhal/mvc-mvp-and-mvvm-design-pattern-6e169567bbad
+
 # choose BEM and not another CSS modular solution?
 http://getbem.com/faq/#why-bem
+
+
+# css properties
+https://css-tricks.com/almanac/properties/
 
 #Micro Frontends
 https://martinfowler.com/articles/micro-frontends.html
