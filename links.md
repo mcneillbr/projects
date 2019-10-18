@@ -8,7 +8,7 @@ http://getbem.com/faq/#why-bem
 # css properties
 https://css-tricks.com/almanac/properties/
 
-#Micro Frontends
+# Micro Frontends
 https://martinfowler.com/articles/micro-frontends.html
 
 # Zeplin helps developers, designers and the whole team
@@ -19,8 +19,11 @@ https://zeplin.io/why-zeplin
 # https://lusion.co/
 https://lusion.co/
 
-#three.js
+# three.js
 https://github.com/mrdoob/three.js
+
+# Locale Quick Reference
+https://www.ibm.com/support/knowledgecenter/en/SSS28S_8.1.0/XFDL/i_xfdl_r_formats_pt_BR.html
 
 # geeksforgeeks - algorithm challenges
 https://practice.geeksforgeeks.org/
