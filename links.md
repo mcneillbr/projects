@@ -1,3 +1,6 @@
+#Learn the best JavaScript
+https://egghead.io
+
 # Regexr 
 https://regexr.com/
 # Brasil UX design
