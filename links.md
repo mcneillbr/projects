@@ -18,6 +18,8 @@ https://medium.com/@ankit.sinhal/mvc-mvp-and-mvvm-design-pattern-6e169567bbad
 # choose BEM and not another CSS modular solution?
 http://getbem.com/faq/#why-bem
 
+# GitBook is a modern documentation platform
+https://docs.gitbook.com/
 
 # css properties
 https://css-tricks.com/almanac/properties/
