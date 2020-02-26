@@ -1,4 +1,10 @@
-#Learn the best JavaScript
+# PHP Docker
+https://phpdocker.io/generator
+
+# Refactoring.Guru
+https://refactoring.guru/
+
+# Learn the best JavaScript
 https://egghead.io
 
 # Regexr 
@@ -22,7 +28,8 @@ https://martinfowler.com/articles/micro-frontends.html
 # Zeplin helps developers, designers and the whole team
 https://zeplin.io/why-zeplin 
 
-#https://github.com/isabellegalvao/js-studies
+# JS Studies 
+https://github.com/isabellegalvao/js-studies
 
 # https://lusion.co/
 https://lusion.co/
@@ -42,36 +49,37 @@ https://sou.gohorseprocess.com.br/extreme-go-horse-xgh/
 # Google doodles
 https://www.google.com/doodles
 
-#mean - mongodb, angular, node express
+# mean - mongodb, angular, node express
 http://meanstack.io/
 
 # rest test test
 https://resttesttest.com/
 
-#api typing dna - biometrics auto for api keystroke
+# api typing dna - biometrics auto for api keystroke
 https://www.typingdna.com/
 
-#code sandbox react and angular and node 
+# Code sandbox react and angular and node 
 https://codesandbox.io
 
 # High performance HTML
 https://samdutton.wordpress.com/2015/04/02/high-performance-html/
 
-#Design atterns PHP
+# Design atterns PHP
 https://designpatternsphp.readthedocs.io/pt_BR/latest/README.html
 
-Image beacon
+# Image beacon
 https://keen.io/docs/streams/image-beacon/
 
-API
-https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon
-
-Creditcard
+# Creditcard Generator
 https://www.bincodes.com/random-creditcard-generator/
 
-# RestAPI
 
-## pt-br
+# API
+https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon
+
+## RestAPI
+
+### pt-br
 https://docs.microsoft.com/pt-br/azure/architecture/best-practices/api-design   ***
 
 https://www.openapis.org/
