@@ -1,3 +1,7 @@
+https://www.wolframalpha.com/examples/pro-features/step-by-step-solutions/
+
+https://www.brunobrito.net.br/oauth2/
+
 # PHP Docker
 https://phpdocker.io/generator
 
