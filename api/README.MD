@@ -76,18 +76,22 @@ TRACE - an entity containing the request message as received by the end server.
    for future requests.
 - 400 (Bad Request)
  - 400 is the generic client-side error status, used when no other 4xx error code is appropriate. Errors can be like malformed request syntax, invalid request message parameters, or deceptive request routing etc.
-
  The client SHOULD NOT repeat the request without modifications.
  [from origin](https://restfulapi.net/http-status-codes/)
 - 401 (Unauthorized)
  - A error response indicates that the client tried to operate on a protected resource without providing the proper authorization.
 - 403 (Forbidden)
  - A 403 error response indicates that the client’s request is formed correctly, but the REST API refuses to honor it, i.e. the user does not have the necessary permissions for the resource. A 403 response is not a case of insufficient client credentials; that would be 401 (“Unauthorized”).
-- 
+- 404 (Not Found)
+ - indicates that the REST API does not find a current representation for the target resource or is not willing to disclose that it exists.
+ A 404 status code does not indicate whether this lack of representation is temporary or permanent; the 410 (Gone) status code is preferred over 404 if the origin server knows, presumably through some configurable means, that the condition is likely to be permanent.
 - 405 Method Not Allowed
  - client tried to use an HTTP method that the resource does not allow.
 - 406 Method Not Allowed
- - The Client used the Accept header to inform a preferred media type. The status code inform responds that it only accepts media application / json..
+ - The Client used the Accept header to inform a preferred media type. The status code inform responds that it only accepts media application / json.
+- The 410 (Gone) status code indicates that access to the target
+   resource is no longer available at the origin server and that this
+   condition is likely to be permanent.  If the origin server does not know, or has no facility to determine, whether or not the condition is permanent, the status code 404 (Not Found) ought to be used instead.
 - 412 Precondition Failed
  - client specified one or more preconditions in its request headers to carry out. Case that those conditions were not met, so instead of carrying out the request, the API sends this status code.
 - 415 Unsupported Media Type
