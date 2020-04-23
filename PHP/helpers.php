@@ -89,3 +89,23 @@ $getJsonString = (function($subject)
 });
 
 
+
+function json_parse($jsonString, $is_array = true) {
+
+    $elm = @json_decode($jsonString, $is_array);
+    
+    if (json_last_error() === JSON_ERROR_NONE) {
+        return $elm;
+    }
+
+    throw new InvalidArgumentException(json_last_error_msg(), json_last_error());
+}
+
+function test_fail_json($str, $isArray = true) {
+    try {
+        print_r( json_parse($str, $isArray) );
+    } catch (Exception $e) {
+        print ("erro json \n code [{$e->getCode()}] \n message [{$e->getMessage()}]");
+    }
+}
+
