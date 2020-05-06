@@ -1,3 +1,7 @@
+# Cheatsheet
+https://htmlcheatsheet.com
+https://htmlcheatsheet.com/css/
+
 # Api Element Mapper
 keyword element mapper; Mapping; Transformation; data-transformation
 https://blog.usejournal.com/how-to-map-rest-api-data-using-decorator-pattern-in-angular-6-94eb49ba16b1
@@ -8,6 +12,8 @@ https://fractal.thephpleague.com/transformers/
 # API Design
 https://restful-api-design.readthedocs.io/en/latest/resources.html
 
+#Send E-mail
+https://sendgrid.com
 
 https://www.wolframalpha.com/examples/pro-features/step-by-step-solutions/
 
